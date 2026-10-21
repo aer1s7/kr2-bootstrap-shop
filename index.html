@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Electron — учебный интернет-магазин электроники: наушники, клавиатуры, ноутбуки и аксессуары."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Electron — интернет-магазин электроники"
+    />
+    <meta
+      property="og:description"
+      content="Учебный frontend-проект интернет-магазина электроники."
+    />
+    <meta
+      property="og:image"
+      content="https://aer1s7.github.io/kr1-html-css-shop/images/preview.jpg"
+    />
+    <title>Electron — интернет-магазин электроники</title>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <a id="top" class="visually-hidden-focusable" href="#main-content"
+      >Перейти к содержимому</a
+    >
+
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-white shadow-sm border-bottom"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-2 brand-link" href="index.html"
+          >ELECTRON</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Оформление заявки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <span class="navbar-text ms-lg-3 fw-semibold brand-text"
+            >Техника для ваших задач</span
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- Hero -->
+
+      <section class="container py-5">
+        <div class="hero-panel rounded-4 shadow-sm p-4 p-lg-5">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-12 col-lg-5">
+              <h1 class="display-5 fw-bold mb-3">
+                Техника, которая делает день проще
+              </h1>
+              <p class="lead text-secondary mb-4">
+                Наушники, клавиатуры, ноутбуки и аксессуары — с гарантией,
+                быстрой доставкой и поддержкой. Подберём то, что подойдёт именно
+                вам.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <a class="btn btn-brand btn-lg" href="catalog.html"
+                  >Перейти в каталог</a
+                >
+                <a class="btn btn-outline-brand btn-lg" href="order.html"
+                  >Оставить заявку</a
+                >
+              </div>
+              <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li>
+                  <span class="text-brand fw-bold me-2">✓</span>Официальная
+                  гарантия
+                </li>
+                <li>
+                  <span class="text-brand fw-bold me-2">✓</span>Доставка по
+                  России
+                </li>
+                <li>
+                  <span class="text-brand fw-bold me-2">✓</span>Поддержка 7 дней
+                  в неделю
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div
+                id="heroCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-theme="dark"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Слайд 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Слайд 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Слайд 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img
+                      src="images/carousel.png"
+                      class="d-block w-100 hero-carousel-image"
+                      alt="Подборка современной электроники"
+                    />
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img
+                      src="images/carousel2.webp"
+                      class="d-block w-100 hero-carousel-image"
+                      alt="Электроника и аксессуары"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/carousel3.jpg"
+                      class="d-block w-100 hero-carousel-image"
+                      alt="Техника для работы и отдыха"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#heroCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span
+                  ><span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#heroCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span
+                  ><span class="visually-hidden">Следующий</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+
+      <section class="container py-4" id="advantages">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4"
+        >
+          <div>
+            <p class="text-brand fw-semibold text-uppercase small mb-2">
+              Наши преимущества
+            </p>
+            <h2 class="h1 fw-bold mb-0">Почему выбирают нас</h2>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4">
+          <div class="col">
+            <article class="card h-100 feature-card">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3" aria-hidden="true">🚚</div>
+                <h3 class="h5 card-title">Быстрая доставка</h3>
+                <p class="card-text text-secondary mb-0">
+                  Отправляем заказы в день оформления. По Москве — курьером за
+                  1–2 дня, по России — почтой и транспортными компаниями.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 feature-card">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3" aria-hidden="true">🛡️</div>
+                <h3 class="h5 card-title">Официальная гарантия</h3>
+                <p class="card-text text-secondary mb-0">
+                  Вся техника — с гарантией производителя до 24 месяцев и
+                  возможностью сервисного обслуживания.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 feature-card">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3" aria-hidden="true">💬</div>
+                <h3 class="h5 card-title">Помощь в выборе</h3>
+                <p class="card-text text-secondary mb-0">
+                  Подскажем, сравним характеристики и подберём технику под ваши
+                  задачи и бюджет — в чате, по телефону или e-mail.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card h-100 feature-card">
+              <div class="card-body p-4">
+                <div class="feature-icon mb-3" aria-hidden="true">💳</div>
+                <h3 class="h5 card-title">Удобная оплата</h3>
+                <p class="card-text text-secondary mb-0">
+                  Оплата картой, переводом или при получении. Для учебных заявок
+                  — без предоплаты.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Популярные товары -->
+
+      <section class="container py-5" id="popular">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4"
+        >
+          <div>
+            <p class="text-brand fw-semibold text-uppercase small mb-2">
+              Выбор покупателей
+            </p>
+            <h2 class="h1 fw-bold mb-0">Популярные товары</h2>
+          </div>
+          <a href="catalog.html" class="btn btn-outline-brand"
+            >Весь каталог <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <article class="card product-card h-100">
+              <span class="badge product-badge">Новинка</span
+              ><a href="product.html" class="product-image-wrap"
+                ><img
+                  class="card-img-top product-image"
+                  src="images/product-1.jpg"
+                  alt="Наушники накладные чёрные"
+              /></a>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h5 card-title">
+                  <a href="product.html" class="product-title-link"
+                    >Наушники накладные чёрные</a
+                  >
+                </h3>
+                <p class="card-text text-secondary text-wrap">
+                  Bluetooth 5.3, до 100 часов работы, быстрая зарядка USB
+                  Type-C.
+                </p>
+                <p class="h4 fw-bold mt-auto mb-3">4 000 ₽</p>
+                <button
+                  class="btn btn-brand w-100"
+                  type="button"
+                  data-product="Наушники накладные чёрные"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card product-card h-100">
+              <a href="product.html" class="product-image-wrap"
+                ><img
+                  class="card-img-top product-image"
+                  src="images/product-2.jpg"
+                  alt="Механическая клавиатура"
+              /></a>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h5 card-title">
+                  <a href="product.html" class="product-title-link"
+                    >Механическая клавиатура</a
+                  >
+                </h3>
+                <p class="card-text text-secondary">
+                  Компактный формат, подсветка, программируемые клавиши.
+                </p>
+                <p class="h3 fw-bold mt-auto mb-3">6 000 ₽</p>
+                <button
+                  class="btn btn-brand w-100"
+                  type="button"
+                  data-product="Механическая клавиатура"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card product-card h-100">
+              <a href="product.html" class="product-image-wrap"
+                ><img
+                  class="card-img-top product-image"
+                  src="images/product-3.jpg"
+                  alt="Ноутбук"
+              /></a>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h5 card-title">
+                  <a href="product.html" class="product-title-link">Ноутбук</a>
+                </h3>
+                <p class="card-text text-secondary">
+                  Яркий экран, длительная автономность, быстрый SSD.
+                </p>
+                <p class="h3 fw-bold mt-auto mb-3">60 000 ₽</p>
+                <button
+                  class="btn btn-brand w-100"
+                  type="button"
+                  data-product="Ноутбук"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Заказать
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- О магазине -->
+
+      <section class="container py-4 mb-5" aria-labelledby="about-shop-title">
+        <div class="about-panel rounded-4 p-4 p-lg-5">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-12 col-lg-7">
+              <h2 class="h1 fw-bold mb-3" id="about-shop-title">
+                О магазине Electron
+              </h2>
+              <p class="text-secondary">
+                Electron — учебный интернет-магазин электроники. Мы продаём
+                наушники, клавиатуры, ноутбуки и аксессуары: от компактных
+                моделей для учёбы до техники для работы и творчества.
+              </p>
+              <p class="text-secondary">
+                Мы помогаем подобрать технику под задачу и бюджет, честно
+                рассказываем о характеристиках и не навязываем лишнее. Если у
+                вас есть вопрос — оставьте заявку, и мы свяжемся с вами.
+              </p>
+              <a class="btn btn-brand" href="order.html">Оставить заявку</a>
+            </div>
+            <div class="col-12 col-lg-5">
+              <dl class="row g-3 mb-0">
+                <div class="col-6">
+                  <div class="fact-card h-100">
+                    <dt class="small text-secondary">Товаров в каталоге</dt>
+                    <dd class="h3 fw-bold text-brand mb-0">100+</dd>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="fact-card h-100">
+                    <dt class="small text-secondary">Доставка по России</dt>
+                    <dd class="h3 fw-bold text-brand mb-0">1–5 дней</dd>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="fact-card h-100">
+                    <dt class="small text-secondary">Гарантия</dt>
+                    <dd class="h3 fw-bold text-brand mb-0">до 24 мес.</dd>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="fact-card h-100">
+                    <dt class="small text-secondary">Поддержка</dt>
+                    <dd class="h3 fw-bold text-brand mb-0">7 дней в неделю</dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер -->
+
+    <footer id="site-footer" class="site-footer pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4 pb-4">
+          <div class="col-12 col-md-4">
+            <a href="index.html" class="footer-logo text-decoration-none"
+              >Electron</a
+            >
+            <p class="mt-2 mb-0">Учебный интернет-магазин электроники</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="h5 mb-3">Разделы</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="order.html">Оформление заявки</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="h5 mb-3">Связаться с нами</h2>
+            <p class="mb-2">+7 925 726-02-95</p>
+            <p class="mb-0">
+              <a href="mailto:support@email.com">support@email.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="border-top footer-bottom pt-3">
+          <p class="small mb-0">&copy; 2026 — Учебный проект</p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">
+              Оформление заявки
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрыть"
+            ></button>
+          </div>
+          <form
+            class="needs-validation"
+            id="order-form"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <div class="modal-body">
+              <input type="hidden" id="selected-product" name="product" />
+              <div class="mb-3">
+                <label class="form-label" for="order-name">Имя</label
+                ><input
+                  class="form-control"
+                  id="order-name"
+                  name="name"
+                  type="text"
+                  placeholder="Введите ваше имя"
+                  autocomplete="given-name"
+                  required
+                />
+                <div class="invalid-feedback">Укажите имя.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="order-email">E-mail</label
+                ><input
+                  class="form-control"
+                  id="order-email"
+                  name="email"
+                  type="email"
+                  placeholder="example@mail.ru"
+                  autocomplete="email"
+                  required
+                />
+                <div class="invalid-feedback">Укажите корректный e-mail.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="order-phone">Телефон</label
+                ><input
+                  class="form-control"
+                  id="order-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  placeholder="+7 (900) 000-00-00"
+                  pattern="^\\+7 \\(\\d{3}\\) \\d{3}-\\d{2}-\\d{2}$"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Введите телефон в формате +7 (900) 000-00-00.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="order-topic">Тема</label
+                ><select
+                  class="form-select"
+                  id="order-topic"
+                  name="topic"
+                  required
+                >
+                  <option value="">Выберите тему</option>
+                  <option value="product">Заказ товара</option>
+                  <option value="consultation">Консультация</option>
+                  <option value="delivery">Доставка</option>
+                </select>
+                <div class="invalid-feedback">Выберите тему обращения.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="order-comment">Комментарий</label
+                ><textarea
+                  class="form-control"
+                  id="order-comment"
+                  name="comment"
+                  rows="4"
+                  placeholder="Укажите дополнительную информацию"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Добавьте комментарий.</div>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  id="order-agreement"
+                  name="agreement"
+                  type="checkbox"
+                  required
+                /><label class="form-check-label" for="order-agreement"
+                  >Я согласен на обработку данных</label
+                >
+                <div class="invalid-feedback">
+                  Необходимо согласие на обработку данных.
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                data-bs-dismiss="modal"
+              >
+                Закрыть</button
+              ><button class="btn btn-brand" type="submit">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="successToast"
+        class="toast align-items-center text-bg-success border-0"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">Форма успешно отправлена!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Закрыть"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="#top"
+      class="scroll-top btn btn-brand rounded-circle shadow"
+      aria-label="Наверх"
+      title="Наверх"
+      >↑</a
+    >
+    <script>
+      (() => {
+        const form = document.getElementById("order-form");
+        const productInput = document.getElementById("selected-product");
+        const modal = document.getElementById("orderModal");
+        document.querySelectorAll("[data-product]").forEach((button) => {
+          button.addEventListener("click", () => {
+            productInput.value = button.dataset.product || "";
+          });
+        });
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+            form.classList.add("was-validated");
+            return;
+          }
+          bootstrap.Modal.getOrCreateInstance(modal).hide();
+          bootstrap.Toast.getOrCreateInstance(
+            document.getElementById("successToast"),
+          ).show();
+          form.reset();
+          form.classList.remove("was-validated");
+        });
+      })();
+    </script>
+  </body>
+</html>
