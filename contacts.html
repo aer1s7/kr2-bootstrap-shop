@@ -171,7 +171,26 @@
                 <p class="text-secondary mb-4">
                   Оставьте контактные данные и кратко опишите вопрос.
                 </p>
-                <form id="contact-form" action="order.html" method="get">
+                <div
+                  id="contacts-alert"
+                  class="alert alert-success alert-dismissible fade show d-none"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <strong>Спасибо!</strong> Ваша заявка успешно отправлена. Мы
+                  свяжемся с вами в течение рабочего дня.
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Закрыть"
+                  ></button>
+                </div>
+                <form
+                  id="contacts-page-form"
+                  action="contacts.html"
+                  method="get"
+                >
                   <div class="mb-3">
                     <label for="contact-name" class="form-label">Ваше имя</label
                     ><input
@@ -283,5 +302,6 @@
       title="Наверх"
       >↑</a
     >
+    <script src="js/contacts.js"></script>
   </body>
 </html>

@@ -231,12 +231,11 @@ body {
   border-color: var(--shop-primary);
 }
 
-
-
-
-    
-  
+.carousel-indicators [data-bs-target] {
+  --bs-carousel-indicator-active-bg: var(--shop-primary);
+  border: 2px solid #fff;
 }
+
 .site-footer a {
   color: var(--shop-accent);
 }
@@ -320,7 +319,10 @@ body {
   border-left: 4px solid var(--shop-primary);
 }
 .contact-card {
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .contact-card:hover {
   transform: translateY(-3px);
@@ -338,4 +340,3 @@ body {
   color: var(--shop-primary-dark);
   text-decoration: underline;
 }
-

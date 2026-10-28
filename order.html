@@ -94,20 +94,20 @@
             Заполните форму — мы свяжемся с вами, уточним детали и поможем
             оформить заказ. Поля, отмеченные *, обязательны для заполнения.
           </p>
-          <ol class="order-steps p-0 d-flex gap-4">
-            <li class="d-flex align-items-center">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="d-flex col align-items-center">
               <span class="order-step fw-bold mx-2">1</span>
               <p class="fs-4 mb-0">Заполните форму</p>
-            </li>
-            <li class="d-flex align-items-center">
-              <span class="order-step fw-bold mx-3">2</span>
+            </div>
+            <div class="d-flex col align-items-center">
+              <span class="order-step fw-bold mx-2">2</span>
               <p class="fs-4 mb-0">Мы свяжемся с вами</p>
-            </li>
-            <li class="d-flex align-items-center">
-              <span class="order-step fw-bold mx-3">3</span>
+            </div>
+            <div class="d-flex col align-items-center">
+              <span class="order-step fw-bold mx-2">3</span>
               <p class="fs-4 mb-0">Подтвердим заказ и доставку</p>
-            </li>
-          </ol>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -115,6 +115,21 @@
 
       <section class="section order-layout">
         <div class="container mt-4 p-4 border rounded">
+          <div
+            id="order-alert"
+            class="alert alert-success alert-dismissible fade show d-none"
+            role="alert"
+            aria-live="polite"
+          >
+            <strong>Спасибо!</strong> Ваша заявка успешно отправлена. Мы
+            свяжемся с вами в течение рабочего дня.
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Закрыть"
+            ></button>
+          </div>
           <form
             class="order-form order-form--page order-card"
             id="order-page-form"
@@ -136,18 +151,14 @@
                       id="page-product"
                       name="product"
                       placeholder="Например: Наушники чёрные накладные"
+                      required
                     />
                   </div>
                   <div class="col-12">
                     <label for="page-topic" class="form-label"
                       >Тема обращения *</label
                     >
-                    <select
-                      class="form-select"
-                      name="topic"
-                      id="page-topic"
-                      required
-                    >
+                    <select class="form-select" name="topic" id="page-topic">
                       <option selected>Выберите тему</option>
                       <option value="1">Заказ товара</option>
                       <option value="2">Консультация</option>
@@ -162,7 +173,6 @@
                       class="form-select"
                       name="delivery"
                       id="page-delivery"
-                      required
                     >
                       <option selected>Самовывоз</option>
                       <option value="1">Курьером</option>
@@ -241,6 +251,7 @@
                       type="checkbox"
                       value=""
                       id="checkDefault"
+                      required
                     />
                     <label class="form-check-label" for="checkDefault">
                       Я согласен на обработку персональных данных *
@@ -333,5 +344,6 @@
       title="Наверх"
       >↑</a
     >
+    <script src="js/order.js"></script>
   </body>
 </html>
